@@ -1,0 +1,40 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+img{width: 100%;}
+:root{
+    --bg1:hsl(165, 85%, 51%);
+    --bg2:hsl(246, 100%, 50%);
+}
+
+.container{
+    height:100vh;
+    background-image: linear-gradient(to right, var(--bg1),var(--bg2));
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.matrix{
+    height: 50vh;
+    width: 50vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+.field{
+    box-shadow: 0 0 10px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateBox 2s 0.3s ;
+}
+@keyframes rotateBox{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(180deg);}
+}
+button{
+    width: 5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: cadetblue;
+}
